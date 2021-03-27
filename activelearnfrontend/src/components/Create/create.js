@@ -19,7 +19,7 @@ class CreateP extends React.Component {
     createRoom = async () => {
         let room_code = await axios({
             method: 'post',
-            url: "http://ec2-54-241-187-155.us-west-1.compute.amazonaws.com:4001/code/create-room",
+            url: "https://ec2-54-241-187-155.us-west-1.compute.amazonaws.com/code/create-room",
         })
 
         console.log(room_code.data.code)
