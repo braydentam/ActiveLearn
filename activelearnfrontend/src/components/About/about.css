@@ -1,0 +1,64 @@
+.mid{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1{
+    width: 300px;
+    height: 300px;
+
+    margin-left: 0px;
+    
+    padding-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+    font-family: Verdana;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.icon1{
+    width: 100px;
+    height: 100px;
+    margin-left: 30%;
+    padding-bottom: 50px;
+}
+.box2{
+    width: 300px;
+    height: 300px;
+    margin-left: 100px;
+    
+    padding-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+    font-family: Verdana;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.icon2{
+    width: 100px;
+    height: 100px;
+    margin-left: 30%;
+    padding-bottom: 50px;
+}
+.box3{
+    width: 300px;
+    height: 300px;
+
+    margin-left: 100px;
+    
+    padding-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+    font-family: Verdana;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.icon3{
+    width: 100px;
+    height: 100px;
+    margin-left: 30%;
+    padding-bottom: 50px;
+}

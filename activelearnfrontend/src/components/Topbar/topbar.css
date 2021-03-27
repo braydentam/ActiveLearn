@@ -1,0 +1,84 @@
+.bar{
+    background-color:#319fd1;
+    margin-top:-20px;
+    height: 600px;
+    
+
+}
+
+.title{
+    padding-left: 20px;
+    padding-top:20px;
+    color:white;
+    font-family: monospace;
+}
+
+.topBarIntroText{
+    padding-top: 50px;
+    color:white;
+    font-family: verdana;
+    font-weight: bold;
+    font-size: 30px;
+    overflow-wrap: break-word;
+    position: absolute;
+    top: 8px;
+    right: 160px;
+    width: 500px;
+}
+
+.logo1{
+    margin-top: 0px;
+    margin-left: 100px;
+    width: 400px;
+    height: auto;
+}
+
+.topBarParagraphText{
+    color: white;
+    width: 500px;
+    font-size: 20px;
+    overflow-wrap: break-word;
+    position: absolute;
+    top: 250px;
+    right: 160px;
+}
+
+.student{
+    background-color: #FCE786;
+    width: 150px;
+    position: absolute;
+    top: 430px;
+    right: 300px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: none;
+    font-size: 15px;
+    font-family: Verdana;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    
+    padding-top: 20px;
+
+    
+}
+
+.teacher{
+    background-color: #E67235;
+    width: 150px;
+    position: absolute;
+    top: 450px;
+    right: 510px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-family: Verdana;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    
+    padding-top: 20px;
+    
+}

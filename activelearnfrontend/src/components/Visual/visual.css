@@ -1,0 +1,33 @@
+.visual{
+    background-color: #319fd1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: right;
+    width: 45vw;
+    height: 95%;
+    margin: 20px;
+    margin-right: 25px;
+    border-radius: 15px;
+    
+    
+}
+.table{
+    background-color: white;
+    height: 40vh;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 15px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.correct{
+    color: green;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.incorrect{
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,63 @@
+.footer{
+    height: 200px;
+    background-color: black;
+}
+
+
+
+.insta{
+    background-color: #FCE786;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 75px;
+    margin-left: 50px;
+}
+
+.mail{
+    background-color: #FCE786;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 25px;
+}
+.twitter{
+    background-color: #FCE786;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 25px;
+
+}
+.face{
+    background-color: #FCE786;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 25px;
+}
+/* .send{
+    background-color: #FCE786;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 1000px;
+}
+
+.in{
+    height: 50px;
+    width: 300px;
+    border-radius: 20px;
+    margin-left: 670px;
+    font-size: 18px;
+    padding: 10px;
+    
+    font-family: verdana;
+
+    
+} */

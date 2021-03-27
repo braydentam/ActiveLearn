@@ -1,0 +1,155 @@
+
+
+.send{
+    background-color: #319fd1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+    width: 45vw;
+    height: 95%;
+    margin: 20px;
+    
+    border-radius: 15px;
+}
+.question{
+    width: 89%;
+    border-width: 4px;
+    border-color: black;
+    border-style: solid;
+    height: 40px;
+    border-radius: 15px;
+    font-family: verdana;
+    font-size: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+    margin-left: 3%;
+}
+.question:hover{
+    
+    border-color:black;
+    background-color: #b6ceda;
+}
+.op1{
+    width: 80%;
+    border-width: 4px;
+    border-color: black;
+    border-style: solid;
+    height: 40px;
+    border-radius: 15px;
+    font-family: verdana;
+    font-size: 20px;
+    margin-top: 50px;
+
+    margin-left: 3%;
+}
+.op1:hover{
+    
+    border-color:black;
+    background-color: #b6ceda;
+}
+.op2{
+    width: 80%;
+    border-width: 4px;
+    border-color: black;
+    border-style: solid;
+    height: 40px;
+    border-radius: 15px;
+    font-family: verdana;
+    font-size: 20px;
+    margin-top: 50px;
+
+    margin-left: 3%;
+}
+.op2:hover{
+    
+    border-color: black;
+    background-color: #b6ceda;
+}
+.op3{
+    width: 80%;
+    border-width: 4px;
+    border-color: black;
+    border-style: solid;
+    height: 40px;
+    border-radius: 15px;
+    font-family: verdana;
+    font-size: 20px;
+    margin-top: 50px;
+    
+    margin-left: 3%;
+}
+.op3:hover{
+    
+    border-color:black;
+    background-color: #b6ceda;
+}
+.op4{
+    width: 80%;
+    border-width: 4px;
+    border-color: black;
+    border-style: solid;
+    height: 40px;
+    border-radius: 15px;
+    font-family: verdana;
+    font-size: 20px;
+    margin-top: 50px;
+
+    margin-left: 3%;
+}
+.op4:hover{
+    
+    border-color:black;
+    background-color: #b6ceda;
+}
+.check1{
+    width: 40px;
+    height: 40px;
+    vertical-align:middle;
+    margin-top: -5px;
+    margin-left: 20px;
+    outline: 3px solid black;
+}
+.check2{
+    width: 40px;
+    height: 40px;
+    vertical-align:middle;
+    margin-top: -5px;
+    margin-left: 20px;
+    outline: 3px solid black;
+}
+.check3{
+    width: 40px;
+    height: 40px;
+    vertical-align:middle;
+    margin-top: -5px;
+    margin-left: 20px;
+    outline: 3px solid black;
+}
+.check4{
+    width: 40px;
+    height: 40px;
+    vertical-align:middle;
+    margin-top: -5px;
+    margin-left: 20px;
+    outline: 3px solid black;
+}
+.sub{
+    width: 89%;
+    border-width: 4px;
+    border-color: black;
+    border-style: solid;
+    height: 60px;
+    border-radius: 15px;
+    font-family: verdana;
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+    margin-left: 3%;
+    background-color: white;
+}
+
+.sub:hover{
+    
+    border-color:black;
+    background-color: #b6ceda;
+    
+}
