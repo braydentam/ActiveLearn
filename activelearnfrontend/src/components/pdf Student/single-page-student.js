@@ -18,11 +18,9 @@ class SinglePage extends React.Component {
     console.log(globalObject.socket)
     setTimeout(() => {
     globalObject.socket.addEventListener("message", (event) =>{
-        console.log("elixir is better than go ok")
         let json = JSON.parse(event.data)
         console.log(json)
         if (json.info === "page") {
-          console.log("we got the page")
           this.setState({
             pageNumber: parseInt(json.value)
           });

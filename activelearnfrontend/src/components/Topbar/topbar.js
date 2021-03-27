@@ -14,8 +14,8 @@ const Topbar = () => {
         <div class = "topBarParagraphText">Over the last year, everyone has learned to communicate over video conferencing systems. These systems were not built for education.
 We want to augment these systems with something that enhances student-teacher engagement on any web conferencing system.
                                         </div>
-        <StudentLink class="student" to="/join">I'm a Student</StudentLink>
-        <StudentLink class = "teacher" to="/create">I'm a Teacher</StudentLink>
+        <StudentLink class="student" to="/join">Join Session</StudentLink>
+        <StudentLink class = "teacher" to="/create">Create Session</StudentLink>
         
         
         </div> 

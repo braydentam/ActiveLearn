@@ -18,7 +18,7 @@ export class ToggleButtons extends Component {
             room_code: globalObject.room_code
         })
 
-        globalObject.socket = new WebSocket("ws://ec2-54-241-187-155.us-west-1.compute.amazonaws.com:8080/ws");
+        globalObject.socket = new WebSocket("wss://ec2-54-241-187-155.us-west-1.compute.amazonaws.com/ws");
         let name = globalObject.name;
         let message = {"role" : "student", "code": globalObject.room_code.toString(), "name" : name, "info" : "join", "value" : ""}
 
@@ -66,7 +66,7 @@ export class ToggleButtons extends Component {
                         <ToggleLink to="/dashboard">
                             <button className="btn-question-student" onClick={()=>this.toggleMe('question')}>Ask a Question  </button>
                         </ToggleLink>
-                        <a className = "pad" href="/pad.html" target="_blank">Collab notes</a>
+                        <a className = "pad" href={"/pad.html?room="+this.state.room_code} target="_blank">Shared notes</a>
                         <ToggleLink to= "/">
                             <button className="btn-leave-student" onClick={()=>this.toggleMe('leave')}> Leave Room </button>
                         </ToggleLink>

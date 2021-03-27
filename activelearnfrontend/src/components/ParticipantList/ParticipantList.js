@@ -11,7 +11,7 @@ class StudentList extends React.Component{
     }
 
     connectSocket = () => {
-        globalObject.socket = new WebSocket("ws://ec2-54-241-187-155.us-west-1.compute.amazonaws.com:8080/ws");
+        globalObject.socket = new WebSocket("wss://ec2-54-241-187-155.us-west-1.compute.amazonaws.com/ws");
         let message = {"role" : "teacher", "code": globalObject.room_code.toString(), "name" : "Teacher", "info" : "msg", "join" : "created room"}
 
         globalObject.socket.onopen = e => {

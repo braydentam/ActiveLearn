@@ -41,9 +41,15 @@
         databaseURL: "https://active-9f5fd-default-rtdb.firebaseio.com/"
       };
       firebase.initializeApp(config);
-  
+      var code = window.location.href.split('?')[1];
+      console.log(code)
+      if (code.substring("room=")) {
+        code = code.replace("room=", "")
+      } else {
+        code = 0
+      }
         // Get Firebase Database reference.
-        var firepadRef = firebase.database().ref(12);
+        var firepadRef = firebase.database().ref(code);
   
         // Create CodeMirror (with lineWrapping on).
         var codeMirror = CodeMirror(document.getElementById('firepad'), { lineWrapping: true });
