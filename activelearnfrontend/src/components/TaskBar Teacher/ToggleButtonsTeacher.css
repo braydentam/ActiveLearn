@@ -53,6 +53,25 @@
     padding: 0px;
     margin-top: 30px;
 }
+.pad{
+    background-color: black;
+    border-width: 4px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    outline: none;
+    height: 25px;
+    width: 200px;
+    margin-right: 20px;
+
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    padding: 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 30px;
+}
 .code{
     color: white;
 }
