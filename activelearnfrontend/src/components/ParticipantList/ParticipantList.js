@@ -73,7 +73,7 @@ class StudentList extends React.Component{
         return(
             <div>
                 <div className="student-list">
-                    <h1 className="par">Participant list</h1>
+                    <h1 className="par">Participants</h1>
                     <ul>
                         {this.state.students.map((student, index) => (
                             <li onClick={() => this.removeStudent(index)} key={index}>

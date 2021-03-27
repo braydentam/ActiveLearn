@@ -63,9 +63,7 @@ export class ToggleButtons extends Component {
             <div>
                 <div className="con-student">
                     <div className="buttons-student">
-                        <ToggleLink to="/dashboard">
-                            <button className="btn-question-student" onClick={()=>this.toggleMe('question')}>Ask a Question  </button>
-                        </ToggleLink>
+                        
                         <a className = "pad" href={"/pad.html?room="+this.state.room_code} target="_blank">Shared notes</a>
                         <ToggleLink to= "/">
                             <button className="btn-leave-student" onClick={()=>this.toggleMe('leave')}> Leave Room </button>
