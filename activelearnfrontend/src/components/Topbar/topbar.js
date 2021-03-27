@@ -18,7 +18,7 @@ const Topbar = () => {
                                         My friends just go down
                                         I’ve revived him now we’re heading south bound</div>
         <StudentLink class="student" to="/join">I'm a Student</StudentLink>
-        <StudentLink class = "teacher" to="/dashboard">I'm a Teacher</StudentLink>
+        <StudentLink class = "teacher" to="/create">I'm a Teacher</StudentLink>
         
         
         </div> 

@@ -1,0 +1,20 @@
+ul {
+    list-style: none; /* Remove default bullets */
+    position: relative;
+    color: white;
+  }
+
+ul li::before{
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block;
+    color: green;
+    font-size: 20px;
+    width: 1em;
+    margin-left: -1em;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+.par{
+    color: white;
+}

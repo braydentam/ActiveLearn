@@ -1,5 +1,6 @@
 import React from 'react';
 import './create.css';
+import {CreateLink} from './createElement';
 
 const CreateP = () => {
     return (
@@ -14,7 +15,9 @@ const CreateP = () => {
             <input type="file" name="file" id="file" class="inputfile"/>
             <label for="file">Choose a file</label>
             <br></br>
+            <CreateLink to="/teacher">
             <button class = "join">Create Room</button>
+            </CreateLink>
             </div>
         </>
     )
