@@ -30,14 +30,14 @@ export class ToggleButtons extends Component {
             // this.sendFile();
           };
           
-          globalObject.socket.onmessage = event => {
+          globalObject.socket.addEventListener("message", event => {
             let json = JSON.parse(event.data)
             console.log(json)
             if (json.info === "pdf") {
               console.log("WE GOT THE PDF")
               document.getElementById("download").href = json.value
             }
-          };
+          });
           
           globalObject.socket.onclose = event => {
             if (event.wasClean) {
@@ -66,10 +66,11 @@ export class ToggleButtons extends Component {
                         <ToggleLink to="/dashboard">
                             <button className="btn-question-student" onClick={()=>this.toggleMe('question')}>Ask a Question  </button>
                         </ToggleLink>
+                        <a className = "pad" href="/pad.html" target="_blank">Collab notes</a>
                         <ToggleLink to= "/">
                             <button className="btn-leave-student" onClick={()=>this.toggleMe('leave')}> Leave Room </button>
                         </ToggleLink>
-                        <a className = "btn-question-student" href="/index.html" target="_blank">Collab notes</a>
+                        
                         <span className="code">Code: {this.state.room_code}</span>
                     </div>
                 </div>

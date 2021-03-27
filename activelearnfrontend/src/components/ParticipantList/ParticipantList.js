@@ -12,8 +12,7 @@ class StudentList extends React.Component{
 
     connectSocket = () => {
         globalObject.socket = new WebSocket("ws://ec2-54-241-187-155.us-west-1.compute.amazonaws.com:8080/ws");
-        let name = globalObject.name
-        let message = {"role" : "teacher", "code": globalObject.room_code.toString(), "name" : name, "info" : "msg", "join" : "created room"}
+        let message = {"role" : "teacher", "code": globalObject.room_code.toString(), "name" : "Teacher", "info" : "msg", "join" : "created room"}
 
         globalObject.socket.onopen = e => {
             console.log("[open] Connection established");
@@ -23,7 +22,7 @@ class StudentList extends React.Component{
             // this.sendFile();
           };
           
-          globalObject.socket.onmessage = event => {
+          globalObject.socket.addEventListener("message", event => {
             let json = JSON.parse(event.data)
             console.log(json)
             if (json.info === "pdf") {
@@ -33,7 +32,7 @@ class StudentList extends React.Component{
                 this.addStudent(json.name)
             }
 
-          };
+          });
           
           globalObject.socket.onclose = event => {
             if (event.wasClean) {

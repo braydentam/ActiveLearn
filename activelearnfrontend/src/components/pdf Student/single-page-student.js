@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Document, Page } from "react-pdf"
+import { globalObject } from "../../App";
 import './pdf-pages-student.css';
 
 class SinglePage extends React.Component {
@@ -13,9 +14,22 @@ class SinglePage extends React.Component {
   }
 
   componentDidMount = () => {
+    console.log("mounted viewer")
+    console.log(globalObject.socket)
     console.log(this.state.pageNumber || (this.state.numPages ? 1 : "--"))
     console.log(this.state.numPages || "--")
-  }
+    globalObject.socket.addEventListener("message", (event) =>{
+        console.log("elixir is better than go ok")
+        let json = JSON.parse(event.data)
+        console.log(json)
+        if (json.info === "page") {
+          console.log("we got the page")
+          this.setState({
+            pageNumber: parseInt(json.value)
+          });
+        }
+      })
+  };
 
   onDocumentLoadSuccess = ({numPages}) => {
     this.setState({

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Document, Page } from "react-pdf";
+import { globalObject } from "../../App";
 import './pdf-pages-teacher.css';
 
 
@@ -32,14 +33,21 @@ class SinglePage extends React.Component {
     this.setState({
       pageNumber: pageNumber
     })
+    return pageNumber
   }
 
   previousPage = () => {
-    this.changePage(-1);
+    let new_page = this.changePage(-1);
+    let message = {"role":"teacher", "code": globalObject.room_code.toString(),"name":"Teacher","info":"page","value":new_page.toString()}
+    console.log(message)
+    globalObject.socket.send(JSON.stringify(message))
   }
 
   nextPage = () => {
-    this.changePage(1);
+    let new_page = this.changePage(1);
+    let message = {"role":"teacher", "code": globalObject.room_code.toString(),"name":"Teacher","info":"page","value":new_page.toString()}
+    console.log(message)
+    globalObject.socket.send(JSON.stringify(message))
   }
 
   render = () => {
