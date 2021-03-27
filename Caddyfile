@@ -1,0 +1,13 @@
+<PUT DOMAIN HERE>
+
+
+handle /test/* {
+   respond "Hello, World"
+}
+handle /code/* {
+    reverse_proxy  127.0.0.1:4001
+}
+
+handle {
+   reverse_proxy 127.0.0.1:8080 
+}
