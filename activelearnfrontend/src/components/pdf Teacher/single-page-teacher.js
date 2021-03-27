@@ -10,14 +10,26 @@ class SinglePage extends React.Component {
     super(props)
     this.state = {
       pageNumber: 1,
-      numPages: 2
+      numPages: 2,
+      pdf: this.props.pdf
     }
+
     console.log("SINGLE PAGE TEACHER")
   }
 
   componentDidMount = () => {
     console.log(this.state.pageNumber || (this.state.numPages ? 1 : "--"))
     console.log(this.state.numPages || "--")
+
+    setTimeout(() => {
+      globalObject.fileInput.addEventListener('change',  () => {
+        if (globalObject.fileInput.files.length !== 0) {
+            this.setState({
+              pdf: globalObject.fileInput.files[0]
+            })
+        }
+    }, false);
+    }, 500)
   }
 
   onDocumentLoadSuccess = ({numPages}) => {
@@ -54,7 +66,7 @@ class SinglePage extends React.Component {
     return (
       <div>
         <Document
-          file={this.props.pdf}
+          file={this.state.pdf}
           options={{ workerSrc: "/pdf.worker.js" }}
           onLoadSuccess={this.onDocumentLoadSuccess}
         >

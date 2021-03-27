@@ -5,6 +5,7 @@
     margin-left: 10px;
     height: 200px;
     background-color: black;
+    overflow: auto;
 }
 .con-teacher{
     height: 80px; 
@@ -53,7 +54,7 @@
     padding: 0px;
     margin-top: 30px;
 }
-.pad{
+.Newpad{
     background-color: black;
     border-width: 4px;
     border-color: white;
@@ -71,12 +72,42 @@
     padding-left: 50px;
     padding-right: 50px;
     margin-top: 30px;
+    margin-left: 20px;
+}
+.Newpad:hover{
+    text-decoration: none;
+    color: white;
+}
+.pad{
+    background-color: black;
+    border-width: 4px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    outline: none;
+    height: 25px;
+    width: 100px;
+    margin-right: 20px;
+
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    padding: 7px;
+    
+    margin-top: 30px;
 }
 .file{
     color: white;
 }
 .code{
-    color: white;
+    color: black;
+    position: absolute;
+    top: -135px;
+    left: 20px;
+    font-weight: bold;
+    font-family: verdana;
+    font-size: 30px;
+
 }
 .inputfile {
 	width: 0.1px;

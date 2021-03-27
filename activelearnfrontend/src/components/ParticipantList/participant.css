@@ -24,5 +24,7 @@ ul li::before{
     list-style-position: inside;
 }
 .par{
-    color: white;
+    color: black;
+    font-size: 20px;
+    text-decoration: underline;
 }
