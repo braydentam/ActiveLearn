@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./ToggleButtons.css";
 import {ToggleLink} from './toggleElement';
+import FirePad from "./firepad"
 
 export class ToggleButtons extends Component {
     constructor(props){
@@ -29,6 +30,11 @@ export class ToggleButtons extends Component {
                     <ToggleLink to= "/">
                     <button className="btn-leave" onClick={()=>this.toggleMe('leave')}> Leave Room </button>
                     </ToggleLink>
+                    {/* <FirePad/> */}
+                    {/* <a href="#" onclick="window.open('./index.html'); return false">CLICK ME</a> */}
+                    
+                
+
                 </div>
                 <div>
                     {

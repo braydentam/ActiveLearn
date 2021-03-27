@@ -11,12 +11,9 @@ const Topbar = () => {
         <span><img class = "logo1" src="learnLogo2.png" alt="logo"></img></span>
         <div className = "topBarIntroText">Classroom Engagement and Interactivity Simplified</div>
         <br></br><br></br>
-        <div class = "topBarParagraphText">Got a number one victory royale
-                                        Yeah fortnite we bout to get down (get down)
-                                        Ten kills on the board right now
-                                        Just wiped out tomato town
-                                        My friends just go down
-                                        I’ve revived him now we’re heading south bound</div>
+        <div class = "topBarParagraphText">Over the last year, everyone has learned to communicate over video conferencing systems. These systems were not built for education.
+We want to augment these systems with something that enhances student-teacher engagement on any web conferencing system.
+                                        </div>
         <StudentLink class="student" to="/join">I'm a Student</StudentLink>
         <StudentLink class = "teacher" to="/create">I'm a Teacher</StudentLink>
         

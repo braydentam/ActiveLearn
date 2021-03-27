@@ -51,3 +51,32 @@
 .code{
     color: white;
 }
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.inputfile + label {
+    font-size: 15px;
+    font-family: verdana;
+    width: 350px;
+    margin-top: 20px;
+    height: 35px;
+    border: none;
+    border-radius: 15px;
+    padding-top: 15px;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #1f2120;
+}
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}

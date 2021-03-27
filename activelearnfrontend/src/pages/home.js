@@ -3,14 +3,16 @@ import Topbar from '../components/Topbar/topbar.js';
 import About from '../components/About/about.js';
 import Footer from '../components/Footer/footer.js';
 
-const Home = () => {
-    return (
-        <div>
-            <Topbar></Topbar>
-            <About></About>
-            <Footer></Footer>
-        </div>
-    )
+class Home extends React.Component {
+    render = () => {
+        return (
+            <div>
+                <Topbar></Topbar>
+                <About></About>
+                <Footer></Footer>
+            </div>
+        )
+    }
 }
 
 export default Home;

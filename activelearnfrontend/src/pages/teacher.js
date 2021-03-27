@@ -12,6 +12,7 @@ inside the app. Otherwise you can use the external link of the pdf file*/
 import samplePDF from "../sample.pdf";
 
 
+
 export default function Teacher() {
   return (
     <>
