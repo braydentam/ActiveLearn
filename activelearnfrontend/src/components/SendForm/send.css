@@ -1,4 +1,11 @@
+.Button{
+    margin: 10px;
+    width: 100px;
+}
+input {
+    margin: 10px;
 
+}
 
 .send{
     background-color: #319fd1;
@@ -29,7 +36,7 @@
     background-color: #b6ceda;
 }
 .op1{
-    width: 80%;
+    width: 89%;
     border-width: 4px;
     border-color: black;
     border-style: solid;
@@ -47,7 +54,7 @@
     background-color: #b6ceda;
 }
 .op2{
-    width: 80%;
+    width: 89%;
     border-width: 4px;
     border-color: black;
     border-style: solid;
@@ -65,7 +72,7 @@
     background-color: #b6ceda;
 }
 .op3{
-    width: 80%;
+    width: 89%;
     border-width: 4px;
     border-color: black;
     border-style: solid;
@@ -83,7 +90,7 @@
     background-color: #b6ceda;
 }
 .op4{
-    width: 80%;
+    width: 89%;
     border-width: 4px;
     border-color: black;
     border-style: solid;
@@ -153,4 +160,19 @@
     border-color:black;
     background-color: #b6ceda;
     
+}
+.mod{
+    width: 89%;
+    border-width: 4px;
+    border-color: black;
+    border-style: solid;
+    height: 60px;
+    border-radius: 15px;
+    font-family: verdana;
+    font-size: 20px;
+    margin-top: 30px;
+    color: black;
+    font-weight: bold;
+    margin-left: 3%;
+    background-color: white;
 }

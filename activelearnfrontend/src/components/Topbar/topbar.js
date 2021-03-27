@@ -11,7 +11,7 @@ const Topbar = () => {
         <span><img class = "logo1" src="learnLogo2.png" alt="logo"></img></span>
         <div className = "topBarIntroText">Bringing Interactivity to Online Classes</div>
         <br></br><br></br>
-        <div class = "topBarParagraphText">Teachers can create, share, and engage with their students with interactive documents.
+        <div class = "topBarParagraphText">ActiveLearn enables teachers to create, share and engage their students using interactive documents. We built ActiveLearn to upgrade any online education platform or web conferencing system to share interactive documents to dramatically improve student-teacher engagement.
                                         </div>
         <StudentLink class="student" to="/join">Join Session</StudentLink>
         <StudentLink class = "teacher" to="/create">Create Session</StudentLink>

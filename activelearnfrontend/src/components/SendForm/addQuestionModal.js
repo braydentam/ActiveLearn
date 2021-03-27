@@ -1,14 +1,21 @@
 import React, {Component, useState} from 'react';
 import {Modal, Button, Row, Col, Form} from 'react-bootstrap';
+import {globalObject} from "../../App"
 
 class AddQuestionModal extends React.Component {
     constructor(props) {
         super(props)
+        console.log("QUESTION MODAL")
         // this.props.options
         this.state = {
-            show: false,
-            options: {}
+            show: this.props.show,
+            options: this.props.options || {ask: "", op1: "", op2: "", op3: "", op4: ""},
+            value: {},
+            checked: "",
+            student: this.props.student || false 
         }
+        console.log("Options");
+        console.log(this.props.options)
     }
 
     handleClose = () => {
@@ -22,10 +29,22 @@ class AddQuestionModal extends React.Component {
         })
     };
 
-    sendData = () => {
-
+    // sorter = (checkedItem) =>{
+    //     this.setState({
+    //         checked:checkedItem
+    //     })
+    // }
+    onFormSubmit = (event) =>{
+        event.preventDefault()
+        const formData = new FormData(event.target),
+        formDataObj = Object.fromEntries(formData.entries())
+        
+        console.log(formDataObj)
+        let message = {"role":"student", "code": globalObject.room_code,"name":globalObject.name,"info":"answer","value":JSON.stringify(formDataObj)}
+        console.log(message);
+        // globalObject.socket.send(JSON.stringify(message))
     }
-
+ 
     render = () => {
         return (
         <>
@@ -40,34 +59,46 @@ class AddQuestionModal extends React.Component {
             keyboard={false}
             >
             <Modal.Header closeButton>
-                <Modal.Title> Question </Modal.Title>
+                <Modal.Title> {this.props.options.ask}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <div className="container">
-                    <Form>
+                    <Form onSubmit={this.onFormSubmit}>
                         {['checkbox'].map((type) => (
                             <div key={`default-${type}`} className="mb-3">
                                 <Form.Check 
                                     type={type}
                                     id={`default-${type}`}
-                                    label="option 1"
+                                    name="option 1"
+                                    label={this.props.options.op1}
+                                    // checked={this.state.checked==="option 1"}
+                                    // onChange={function(){this.sorter("option 1")}}
                                 />
                                 <Form.Check 
                                     type={type}
                                     id={`default-${type}`}
-                                    label="option 2"
+                                    name="option 2"
+                                    label={this.props.options.op2}
+                                    // checked={this.state.checked==="option 2"}
+                                    // onChange={function(){this.sorter("option 2")}}
                                 />
                                 <Form.Check 
                                     type={type}
                                     id={`default-${type}`}
-                                    label="option 3"
+                                    name="option 3"
+                                    label={this.props.options.op3}
+                                    // checked={this.state.checked==="option 3"}
+                                    // onChange={function(){this.sorter("option 3")}}
                                 />
                                 <Form.Check 
                                     type={type}
                                     id={`default-${type}`}
-                                    label="option 4"
+                                    name="option 4"
+                                    label={this.props.options.op4}
+                                    // checked={this.state.checked==="option 4"}
+                                    // onChange={function(){this.sorter("option 4")}}
                                 />
-                                <Button variant="primary" type="submit" onClick={this.sendData}>
+                                <Button variant="primary" type="submit">
                                     Submit
                                 </Button>
                             </div>
