@@ -1,57 +1,84 @@
 import React, { useState } from "react";
 import { Document, Page } from "react-pdf";
+import { globalObject } from "../../App";
 import './pdf-pages-teacher.css';
 
 
 
-export default function SinglePage(props) {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1); //setting 1 to show fisrt page
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-    setPageNumber(1);
+class SinglePage extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      pageNumber: 1,
+      numPages: 2
+    }
+    console.log("SINGLE PAGE TEACHER")
   }
 
-  function changePage(offset) {
-    setPageNumber(prevPageNumber => prevPageNumber + offset);
+  componentDidMount = () => {
+    console.log(this.state.pageNumber || (this.state.numPages ? 1 : "--"))
+    console.log(this.state.numPages || "--")
   }
 
-  function previousPage() {
-    changePage(-1);
+  onDocumentLoadSuccess = ({numPages}) => {
+    this.setState({
+      pageNumber: 1,
+      numPages: numPages
+    })
   }
 
-  function nextPage() {
-    changePage(1);
+  changePage = (offset) => {
+    let pageNumber = this.state.pageNumber;
+    pageNumber += offset;
+    this.setState({
+      pageNumber: pageNumber
+    })
+    return pageNumber
   }
 
-  const { pdf } = props;
+  previousPage = () => {
+    let new_page = this.changePage(-1);
+    let message = {"role":"teacher", "code": globalObject.room_code.toString(),"name":"Teacher","info":"page","value":new_page.toString()}
+    console.log(message)
+    globalObject.socket.send(JSON.stringify(message))
+  }
 
-  return (
-    <div>
-      <Document
-        file={pdf}
-        options={{ workerSrc: "/pdf.worker.js" }}
-        onLoadSuccess={onDocumentLoadSuccess}
-      >
-        <Page pageNumber={pageNumber} />
-      </Document>
+  nextPage = () => {
+    let new_page = this.changePage(1);
+    let message = {"role":"teacher", "code": globalObject.room_code.toString(),"name":"Teacher","info":"page","value":new_page.toString()}
+    console.log(message)
+    globalObject.socket.send(JSON.stringify(message))
+  }
+
+  render = () => {
+    return (
       <div>
-        <p className="pg">
-          Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
-        </p>
-        <button className = "prev" type="button" disabled={pageNumber <= 1} onClick={previousPage}>
-          Previous
-        </button>
-        <button
-          className = "next"
-          type="button"
-          disabled={pageNumber >= numPages}
-          onClick={nextPage}
+        <Document
+          file={this.props.pdf}
+          options={{ workerSrc: "/pdf.worker.js" }}
+          onLoadSuccess={this.onDocumentLoadSuccess}
         >
-          Next
-        </button>
+          <Page pageNumber={this.state.pageNumber} />
+        </Document>
+        <div>
+          <p className="pg">
+            Page {this.state.pageNumber || (this.state.numPages ? 1 : "--")} of {this.state.numPages || '--'}
+          </p>
+          <button className = "prev" type="button" disabled={this.state.pageNumber <= 1} onClick={this.previousPage}>
+            Previous
+          </button>
+          <button
+            className = "next"
+            type="button"
+            disabled={this.state.pageNumber >= this.state.numPages}
+            onClick={this.nextPage}
+          >
+            Next
+          </button>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
+
+export default SinglePage;

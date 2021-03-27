@@ -1,43 +1,72 @@
 import React, { useState } from "react";
 import { Document, Page } from "react-pdf"
+import { globalObject } from "../../App";
 import './pdf-pages-student.css';
 
-
-export default function SinglePage(props) {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1); //setting 1 to show fisrt page
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-    setPageNumber(1);
+class SinglePage extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      pageNumber: 1,
+      numPages: 2
+    }
+    console.log("SINGLE PAGE TEACHER")
   }
 
-  function changePage(offset) {
-    setPageNumber(prevPageNumber => prevPageNumber + offset);
+  componentDidMount = () => {
+    console.log("mounted viewer")
+    console.log(globalObject.socket)
+    setTimeout(() => {
+    globalObject.socket.addEventListener("message", (event) =>{
+        console.log("elixir is better than go ok")
+        let json = JSON.parse(event.data)
+        console.log(json)
+        if (json.info === "page") {
+          console.log("we got the page")
+          this.setState({
+            pageNumber: parseInt(json.value)
+          });
+        }
+      })
+    }, 500)
+  };
+
+  onDocumentLoadSuccess = ({numPages}) => {
+    this.setState({
+      pageNumber: 1,
+      numPages: numPages
+    })
   }
 
-  function previousPage() {
-    changePage(-1);
+  changePage = (offset) => {
+    let pageNumber = this.state.pageNumber;
+    pageNumber += offset;
+    this.setState({
+      pageNumber: pageNumber
+    })
   }
 
-  function nextPage() {
-    changePage(1);
+  previousPage = () => {
+    this.changePage(-1);
   }
 
-  const { pdf } = props;
+  nextPage = () => {
+    this.changePage(1);
+  }
 
-  return (
-    <>
+  render = () => {
+    return (
+      <>
       <Document
-        file={pdf}
+        file={this.props.pdf}
         options={{ workerSrc: "/pdf.worker.js" }}
-        onLoadSuccess={onDocumentLoadSuccess}
+        onLoadSuccess={this.onDocumentLoadSuccess}
       >
-        <Page pageNumber={pageNumber} />
+        <Page pageNumber={this.state.pageNumber} />
       </Document>
       <div>
         <p className="pg">
-          Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
+          Page {this.state.pageNumber || (this.state.numPages ? 1 : "--")} of {this.state.numPages || "--"}
         </p>
         {/* <button className = "prev" type="button" disabled={pageNumber <= 1} onClick={previousPage}>
           Previous
@@ -52,5 +81,8 @@ export default function SinglePage(props) {
         </button> */}
       </div>
     </>
-  );
+    );
+  }
 }
+
+export default SinglePage;

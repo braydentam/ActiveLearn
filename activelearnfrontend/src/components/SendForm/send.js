@@ -14,6 +14,7 @@ class Send extends React.Component{
             options: {},
             modal: false
         }
+        this.myRef = React.createRef();
     }
 
     handleChange = ({ target }) => {

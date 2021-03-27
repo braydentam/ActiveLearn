@@ -26,7 +26,10 @@
     font-size: 30px;
 
 }
-
+.select{
+    font-family: verdana;
+    font-size: 20px;
+}
 .incorrect{
     color: red;
     font-weight: bold;

@@ -17,6 +17,39 @@ export class ToggleButtons extends Component {
         this.setState({
             room_code: globalObject.room_code
         })
+
+        globalObject.socket = new WebSocket("ws://ec2-54-241-187-155.us-west-1.compute.amazonaws.com:8080/ws");
+        let name = globalObject.name;
+        let message = {"role" : "student", "code": globalObject.room_code.toString(), "name" : name, "info" : "join", "value" : ""}
+
+        globalObject.socket.onopen = e => {
+            console.log("[open] Connection established");
+            console.log("Sending to server");
+            console.log(message);
+            globalObject.socket.send(JSON.stringify(message));
+            // this.sendFile();
+          };
+          
+          globalObject.socket.addEventListener("message", event => {
+            let json = JSON.parse(event.data)
+            console.log(json)
+            if (json.info === "pdf") {
+              console.log("WE GOT THE PDF")
+              document.getElementById("download").href = json.value
+            }
+          });
+          
+          globalObject.socket.onclose = event => {
+            if (event.wasClean) {
+              console.log(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+            } else {
+              console.log('[close] Connection died');
+            }
+          };
+          
+          globalObject.socket.onerror = error => {
+            console.log(`[error] ${error.message}`);
+          };
     }
 
     toggleMe = (value) =>{
@@ -33,9 +66,11 @@ export class ToggleButtons extends Component {
                         <ToggleLink to="/dashboard">
                             <button className="btn-question-student" onClick={()=>this.toggleMe('question')}>Ask a Question  </button>
                         </ToggleLink>
+                        <a className = "pad" href="/pad.html" target="_blank">Collab notes</a>
                         <ToggleLink to= "/">
                             <button className="btn-leave-student" onClick={()=>this.toggleMe('leave')}> Leave Room </button>
                         </ToggleLink>
+                        
                         <span className="code">Code: {this.state.room_code}</span>
                     </div>
                 </div>
