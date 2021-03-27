@@ -3,7 +3,7 @@ import React from "react";
 import ToggleButtons from '../components/TaskBar Teacher/ToggleButtonsTeacher.js';
 import StudentList from '../components/ParticipantList/ParticipantList.js';
 import './teacher.css';
-import SinglePagePDFViewer from "../components/pdf/single-page.js";
+import SinglePagePDFViewer from "../components/pdf/single-page-teacher.js";
 
 //import Test from "./components/pdf/test";
 
