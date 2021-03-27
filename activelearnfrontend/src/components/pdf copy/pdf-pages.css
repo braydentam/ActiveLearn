@@ -1,0 +1,66 @@
+button {
+  margin-right: 10px;
+  background: #3f51b5;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  width: 100px;
+  cursor: pointer;
+  
+}
+
+/* For pdf */
+.react-pdf__Page {
+  margin-top: 10px;
+}
+.react-pdf__Page__textContent {
+  border: 5px solid white;
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-bottom: -10px;
+  
+ 
+  
+}
+
+.next{
+  width: 20vw;
+  height: 10vh;
+  font-family: verdana;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 20px;
+}
+.prev{
+  width: 20vw;
+  height: 10vh;
+  font-family: verdana;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 20px;
+  margin-left: 30vw;
+}
+.pg{
+  color: white;
+  font-weight: bold;
+  font-family: verdana;
+  margin-left: 47vw;
+}
+.react-pdf__Page__annotations.annotationLayer {
+    margin-bottom: 10px;
+    padding: 0px;
+    
+}
+
+.react-pdf__Page__canvas {
+  margin: 0 auto;
+  
+}
+
+/* For all pages */
+.all-page-container {
+  height: 100%;
+  max-height: 500px;
+  
+  overflow: auto;
+}

@@ -5,6 +5,7 @@ import JoinPage from './pages/join';
 import Create from './pages/create';
 import Teacher from './pages/teacher';
 import Dashboard from './pages/dashboard';
+import Student from './pages/student';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/create" exact component={Create}/>
         <Route path="/dashboard" exact component={Dashboard}/>
         <Route path="/teacher" exact component={Teacher}/>
+        <Route path="/student" exact component={Student}/>
       </Switch>
     </Router>
       

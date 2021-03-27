@@ -1,0 +1,53 @@
+.buttons{
+    background-color: black;
+    height: 70px;
+    align-items: center;
+    padding-bottom: 30px;
+    margin-bottom: 100vh;
+}
+.con{
+    height: 40px; 
+    position: fixed; 
+    bottom:10%;
+    width:100%; 
+    background-color: #393838; 
+    opacity: 1;
+}
+.btn-question{
+    background-color: black;
+    border-width: 4px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    outline: none;
+    height: 40px;
+    width: 200px;
+}
+.btn-raise{
+    background-color: black;
+    border-width: 4px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    outline: none;
+    height: 40px;
+    width: 200px;
+    margin-top: 30px;
+}
+
+
+.btn-leave{
+    background-color: red;
+    border-width: 4px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    outline: none;
+    height: 40px;
+    width: 200px;
+    margin-top: 30px;
+}
+.code{
+    color: white;
+    margin-left: 46vw;
+}

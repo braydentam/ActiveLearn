@@ -1,6 +1,6 @@
 import React from 'react';
 import './join.css';
-
+import {StudentLink} from './studentElement';
 const Join = () => {
     return (
         <>
@@ -13,7 +13,9 @@ const Join = () => {
             <br></br>
             <input class = "room" placeholder="Room Code:"></input>
             <br></br>
+            <StudentLink to="/student">
             <button class = "join">Join Room</button>
+            </StudentLink>
             </div>
         </>
     )
