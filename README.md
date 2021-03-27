@@ -1,2 +1,3 @@
 # ActiveLearn
-note: works better on laptop/pc
+https://activelearn.netlify.app/ (Designed for Laptop/PC at the moment)
+
