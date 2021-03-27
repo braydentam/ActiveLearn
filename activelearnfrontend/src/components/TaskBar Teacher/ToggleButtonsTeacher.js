@@ -37,6 +37,7 @@ export class ToggleButtons extends Component {
                             <button className="btn-question-teacher" onClick={()=>this.toggleMe('question')}>Ask a Question  </button>
                         </ToggleLink>
                         <a className = "pad" href="/pad.html" target="_blank">Collab notes</a>
+                        <input type="file" name="file" id="filesubmit" class="inputfile"/>
                         <ToggleLink to= "/">
                             <button className="btn-leave-teacher" onClick={()=>this.toggleMe('leave')}> Leave Room </button>
                         </ToggleLink>
