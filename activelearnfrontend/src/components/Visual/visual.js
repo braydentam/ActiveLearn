@@ -6,7 +6,13 @@ import Chart from "react-apexcharts";
 class Visual extends Component {
     constructor(props) {
       super(props);
-  
+      this.vals = [
+          {
+            "Bill":4,
+            "Bob":4,
+            "Joe":3
+          },
+        ];
       this.state = {
         options: {
           chart: {
@@ -29,6 +35,7 @@ class Visual extends Component {
     }
   
     render() {
+     
     return (
         <>
       
