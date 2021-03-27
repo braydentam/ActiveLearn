@@ -1,9 +1,9 @@
 import React from "react";
 
-import ToggleButtons from '../components/TaskBar/ToggleButtons.js';
+import ToggleButtons from '../components/TaskBar Teacher/ToggleButtonsTeacher.js';
 import StudentList from '../components/ParticipantList/ParticipantList.js';
 import './teacher.css';
-import SinglePagePDFViewer from "../components/pdf/single-page.js";
+import SinglePagePDFViewer from "../components/pdf Teacher/single-page-teacher.js";
 
 //import Test from "./components/pdf/test";
 
@@ -17,8 +17,10 @@ export default function Teacher() {
   return (
     <>
     <div className="App">
-      <SinglePagePDFViewer pdf={samplePDF} className="Single-pg"/>
-      <StudentList/>
+      <div>
+        <SinglePagePDFViewer pdf={samplePDF} className="Single-pg"/>
+        <StudentList/>
+      </div>
       <ToggleButtons className="task-bar-btns"/>
     </div>
     </>

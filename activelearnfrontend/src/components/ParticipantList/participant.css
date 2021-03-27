@@ -1,8 +1,16 @@
+.student-list{
+    background-color: rgb(128, 128, 128);
+    width: 15vw;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
 ul {
     list-style: none; /* Remove default bullets */
     position: relative;
     color: white;
-  }
+}
 
 ul li::before{
     content: "\2022";

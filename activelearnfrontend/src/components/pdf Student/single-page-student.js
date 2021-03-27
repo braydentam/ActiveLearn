@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Document, Page } from "react-pdf"
-import './pdf-pages.css';
-
+import './pdf-pages-student.css';
 
 
 export default function SinglePage(props) {
@@ -37,20 +36,20 @@ export default function SinglePage(props) {
         <Page pageNumber={pageNumber} />
       </Document>
       <div>
-        <p class="pg">
+        <p className="pg">
           Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
         </p>
-        <button class = "prev" type="button" disabled={pageNumber <= 1} onClick={previousPage}>
+        {/* <button className = "prev" type="button" disabled={pageNumber <= 1} onClick={previousPage}>
           Previous
-        </button>
-        <button
-          class = "next"
+        </button> */}
+        {/* <button
+          className = "next"
           type="button"
           disabled={pageNumber >= numPages}
           onClick={nextPage}
         >
           Next
-        </button>
+        </button> */}
       </div>
     </>
   );

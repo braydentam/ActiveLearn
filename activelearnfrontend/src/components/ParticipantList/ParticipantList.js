@@ -17,14 +17,16 @@ function StudentList(props){
 
     return(
         <div>
-            <h1 class="par">Participant list</h1>
-            <ul>
-                {list.map((student, index) => (
-                    <li onClick={() => removeStudent(index)} key={index}>
-                        {student}
-                    </li>
-                ))}
-            </ul>
+            <div className="student-list">
+                <h1 className="par">Participant list</h1>
+                <ul>
+                    {list.map((student, index) => (
+                        <li onClick={() => removeStudent(index)} key={index}>
+                            {student}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 }

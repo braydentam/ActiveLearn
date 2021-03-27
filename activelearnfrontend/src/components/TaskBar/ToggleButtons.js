@@ -11,14 +11,12 @@ export class ToggleButtons extends Component {
             tabType:'',
             room_code: "Code: "
         }
-
+    }
+    componentDidMount = () => {
         this.setState({
             room_code: "Code: " + globalObject.room_code
         })
-        
-    
     }
-
     toggleMe = (value) =>{
         this.setState({
             tabType:value
