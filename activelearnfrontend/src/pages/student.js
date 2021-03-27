@@ -1,9 +1,9 @@
 import React from "react";
 
-import ToggleButtons from '../components/TaskBar copy/ToggleButtons.js';
+import ToggleButtons from '../components/TaskBar Student/ToggleButtonsStudent.js';
 
 import './teacher.css';
-import SinglePagePDFViewer from "../components/pdf copy/single-page.js";
+import SinglePagePDFViewer from "../components/pdf Student/single-page-student.js";
 
 //import Test from "./components/pdf/test";
 

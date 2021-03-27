@@ -1,19 +1,21 @@
-.buttons{
-    background-color: black;
-    height: 70px;
+.buttons-student{
     align-items: center;
-    padding-bottom: 30px;
-    margin-bottom: 100vh;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    height: 200px;
+    background-color: black;
 }
-.con{
-    height: 40px; 
+.con-student{
+    height: 80px; 
     position: fixed; 
-    bottom:10%;
-    width:100%; 
-    background-color: #393838; 
+    bottom: 0px;
+    margin-bottom: 0px;
+    width: 100%; 
+    background-color: black; 
     opacity: 1;
 }
-.btn-question{
+.btn-question-student{
     background-color: black;
     border-width: 4px;
     border-color: white;
@@ -22,8 +24,10 @@
     outline: none;
     height: 40px;
     width: 200px;
+    padding: 0px;
+    margin-top: 30px;
 }
-.btn-raise{
+.btn-raise-student{
     background-color: black;
     border-width: 4px;
     border-color: white;
@@ -32,11 +36,12 @@
     outline: none;
     height: 40px;
     width: 200px;
+    padding: 0px;
     margin-top: 30px;
 }
 
 
-.btn-leave{
+.btn-leave-student{
     background-color: red;
     border-width: 4px;
     border-color: white;
@@ -45,9 +50,6 @@
     outline: none;
     height: 40px;
     width: 200px;
+    padding: 0px;
     margin-top: 30px;
-}
-.code{
-    color: white;
-    margin-left: 46vw;
 }

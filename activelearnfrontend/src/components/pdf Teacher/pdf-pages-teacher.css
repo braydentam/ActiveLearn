@@ -4,12 +4,12 @@ button {
   color: white;
   border: none;
   padding: 5px 10px;
-  width: 100px;
+  width: 50px;
   cursor: pointer;
   
 }
 
-/* For pdf */
+/* For pdf
 .react-pdf__Page {
   margin-top: 10px;
 }
@@ -60,7 +60,7 @@ button {
 /* For all pages */
 .all-page-container {
   height: 100%;
-  max-height: 500px;
+  max-height: 100%;
   
   overflow: auto;
 }
