@@ -36,8 +36,8 @@ class CreateP extends React.Component {
             console.log("[open] Connection established");
             console.log("Sending to server");
             console.log(message);
-            this.socket.send(JSON.stringify(message));
-            this.sendFile();
+            // this.socket.send(JSON.stringify(message));
+            // this.sendFile();
           };
           
           this.socket.onmessage = event => {
