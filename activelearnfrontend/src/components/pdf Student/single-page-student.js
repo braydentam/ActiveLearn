@@ -8,7 +8,8 @@ class SinglePage extends React.Component {
     super(props)
     this.state = {
       pageNumber: 1,
-      numPages: 2
+      numPages: 2,
+      pdf: this.props.pdf
     }
     console.log("SINGLE PAGE TEACHER")
   }
@@ -24,6 +25,10 @@ class SinglePage extends React.Component {
           this.setState({
             pageNumber: parseInt(json.value)
           });
+        } else if (json.info === "file") {
+          this.setState({
+            pdf: json.value
+          })
         }
       })
     }, 500)
@@ -56,7 +61,7 @@ class SinglePage extends React.Component {
     return (
       <>
       <Document
-        file={this.props.pdf}
+        file={this.state.pdf}
         options={{ workerSrc: "/pdf.worker.js" }}
         onLoadSuccess={this.onDocumentLoadSuccess}
       >

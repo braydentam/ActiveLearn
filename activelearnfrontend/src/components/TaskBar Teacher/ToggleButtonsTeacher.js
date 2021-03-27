@@ -43,6 +43,8 @@ export class ToggleButtons extends Component {
 
         var fileInput = document.getElementById('filesubmit')
 
+        globalObject.fileInput = fileInput;
+
         fileInput.addEventListener('change',  () => {
             if (fileInput.files.length !== 0) {
                 this.sendFile()
@@ -67,7 +69,7 @@ export class ToggleButtons extends Component {
                         </ToggleLink>
                         <a className = "Newpad" href={"/pad.html?room="+this.state.room_code} target="_blank">Collab notes</a>
                         <a className = "pad">
-                        <input className = "file" type="file" name="activelearnfile" id="filesubmit"/>
+                        <input className = "file" type="file" name="activelearnfile" id="filesubmit" accept=".pdf"/>
                         </a>
                         <ToggleLink to= "/">
                             <button className="btn-leave-teacher" onClick={()=>this.toggleMe('leave')}> Leave Room </button>
