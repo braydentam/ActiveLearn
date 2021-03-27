@@ -6,14 +6,23 @@ import Chart from "react-apexcharts";
 class Visual extends Component {
     constructor(props) {
       super(props);
-      this.vals = [
-          {
-            "Bill":4,
-            "Bob":4,
-            "Joe":3
-          },
-        ];
+
       this.state = {
+        correctAnswer: 4,
+        values: [
+          {
+            name: "Bob",
+            answer: "4"
+          },
+          {
+            name: "Joe",
+            answer: "4"
+          },
+          {
+            name: "Bill",
+            answer: "3"
+          }
+        ],
         options: {
           chart: {
             id: "basic-bar"
@@ -33,9 +42,21 @@ class Visual extends Component {
         ]
       };
     }
+    
   
     render() {
-     
+      const { values } = this.state;
+      const { correctAnswer } = this.state;
+      var chose1 = 0;
+      var chose2 = 0;
+      var chose3 = 0;
+      var chose4 = 0;
+
+      // values.map(value => (
+      //   if(chose1 == value.answer){
+      //     chose1++;
+      // }
+      //   ))
     return (
         <>
       
@@ -53,8 +74,11 @@ class Visual extends Component {
                 </div>
             </div>
             <div className="table">
-            <h1 class="correct">Correct: </h1><p>Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,</p>
-                <h1 class="incorrect">Incorrect: </h1><p>Bob, Bob</p>
+            {/* <h1 class="correct">Correct: </h1><p>Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,Bob, Bob,</p>
+                <h1 class="incorrect">Incorrect: </h1><p>Bob, Bob</p> */}
+            {values.map(value => (
+              <p key={value.name}>{value.name} : {value.answer} </p>
+            ))}
 
             </div>
 
