@@ -36,7 +36,7 @@ export class ToggleButtons extends Component {
                         <ToggleLink to="/dashboard">
                             <button className="btn-question-teacher" onClick={()=>this.toggleMe('question')}>Ask a Question  </button>
                         </ToggleLink>
-                        <a className = "pad" href="/pad.html" target="_blank">Collab notes</a>
+                        <a className = "pad" href={"/pad.html?room="+this.state.room_code} target="_blank">Collab notes</a>
                         <a className = "pad">
                         <input className = "file" type="file" name="file" id="filesubmit"/>
                         </a>
