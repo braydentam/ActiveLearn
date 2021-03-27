@@ -11,7 +11,7 @@
     width: 50px;
     padding: 10px;
     border-radius: 20px;
-    margin-top: 75px;
+    margin-top: 55px;
     margin-left: 50px;
 }
 
@@ -22,6 +22,7 @@
     padding: 10px;
     border-radius: 20px;
     margin-left: 25px;
+    margin-top: 55px;
 }
 .twitter{
     background-color: #FCE786;
@@ -30,6 +31,7 @@
     padding: 10px;
     border-radius: 20px;
     margin-left: 25px;
+    margin-top: 55px;
 
 }
 .face{
@@ -39,6 +41,7 @@
     padding: 10px;
     border-radius: 20px;
     margin-left: 25px;
+    margin-top: 55px;
 }
 /* .send{
     background-color: #FCE786;
