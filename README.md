@@ -4,7 +4,7 @@ Over the last year, everyone has learned to communicate over video conferencing 
 We want to augment these systems with something that enhances student-teacher engagement on any web conferencing system.
 
 ## How we do it
-We provide real-time data and feedback for teachers
+We provide real-time data and feedback for teachers.
 We help teachers create, share, and engage with their students with interactive documents:
 * Document sharing
   * High resolution screen sharing system
