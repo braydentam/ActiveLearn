@@ -1,6 +1,7 @@
 import React,{ useState } from 'react';
 import './send.css';
 import axios from 'axios';
+import {StudentLink} from './studentElement';
 
 import {Button, ButtonToolbar} from 'react-bootstrap';
 import AddQuestionModal from './addQuestionModal';
@@ -95,8 +96,9 @@ class Send extends React.Component{
                         /><br/>
                         <button className = "sub" onClick={this.handleClick} type="submit">Submit</button>
                     </form>
+                    <StudentLink className = "back" to="/teacher">Back</StudentLink>
                     <div>
-                        <AddQuestionModal className = "mod"show={false} options={this.state.options} onClick={this.toggleShow}/>
+                        {/* <AddQuestionModal className = "mod" show={false} options={this.state.options} onClick={this.toggleShow}/> */}
                     </div>
                 </div>
             </>

@@ -9,17 +9,18 @@ class AddQuestionModal extends React.Component {
         console.log("QUESTION MODAL")
         // this.props.options
         this.state = {
-            show: this.props.show,
+            show: true,
             options: this.props.options || {ask: "", op1: "", op2: "", op3: "", op4: ""},
             value: {},
             checked: "",
             student: this.props.student || false 
         }
-        console.log("Options");
-        console.log(this.props.options)
+        console.log("Show: Modal");
+        console.log(this.state.show)
     }
 
     handleClose = () => {
+        this.props.resetShow()
         this.setState({
             show: false
         })
@@ -43,24 +44,23 @@ class AddQuestionModal extends React.Component {
         console.log(formDataObj)
         let message = {"role":"student", "code": globalObject.room_code,"name":globalObject.name,"info":"answer","value":JSON.stringify(formDataObj)}
         console.log(message);
-        // globalObject.socket.send(JSON.stringify(message))
+        globalObject.socket.send(JSON.stringify(message))
     }
- 
     render = () => {
         return (
         <>
-            <Button className = "open" variant="danger" onClick={this.handleShow}>
-                Open Question
+            <Button className = "open" variant="primary" onClick={this.handleShow}>
+                Student
             </Button>
 
             <Modal
-            show={this.state.show}
+            show={this.props.show && this.state.show}
             onHide={this.handleClose}
             backdrop="static"
             keyboard={false}
             >
             <Modal.Header closeButton>
-                <Modal.Title> {this.props.options.ask}</Modal.Title>
+                <Modal.Title> {this.props.options.ask} </Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <div className="container">
@@ -99,7 +99,7 @@ class AddQuestionModal extends React.Component {
                                     // checked={this.state.checked==="option 4"}
                                     // onChange={function(){this.sorter("option 4")}}
                                 />
-                                <Button variant="primary" type="submit">
+                                <Button variant="primary" type="submit" className='submit-btn' onClick={this.handleClose}>
                                     Submit
                                 </Button>
                             </div>
@@ -108,9 +108,6 @@ class AddQuestionModal extends React.Component {
                 </div>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="danger" onClick={this.handleClose}>
-                    Close
-                </Button>
             </Modal.Footer>
             </Modal>
         </>

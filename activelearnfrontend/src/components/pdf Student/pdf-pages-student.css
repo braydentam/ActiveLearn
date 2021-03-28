@@ -23,7 +23,9 @@
  
   
 }
-
+.bigCon{
+  background-color: white;
+}
 .next{
   width: 20vw;
   height: 10vh;

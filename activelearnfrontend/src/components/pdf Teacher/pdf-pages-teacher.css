@@ -9,6 +9,9 @@ button {
   cursor: pointer;
   
 }
+.pdfCon{
+  background-color: white;
+}
 .next{
   margin-left: 20px;
 }

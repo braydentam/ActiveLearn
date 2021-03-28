@@ -60,6 +60,7 @@ class SinglePage extends React.Component {
   render = () => {
     return (
       <>
+      <div className="bigCon">
       <Document
         file={this.state.pdf}
         options={{ workerSrc: "/pdf.worker.js" }}
@@ -82,6 +83,7 @@ class SinglePage extends React.Component {
         >
           Next
         </button> */}
+      </div>
       </div>
     </>
     );

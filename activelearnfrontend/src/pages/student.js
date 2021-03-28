@@ -21,6 +21,13 @@ class Seacher extends React.Component {
       options: {},
       show_question: false
     }
+
+    // setTimeout(() => {
+    //   console.log("showing")
+    //   this.setState({
+    //     show_question: true
+    //   })
+    // }, 1000)
   }
 
   componentDidMount = () => {
@@ -36,17 +43,24 @@ class Seacher extends React.Component {
                 options: JSON.parse(json.value),
             }) 
 
-            console.log(this.state.options)
+            console.log("SHOW: " + this.state.show_question)
         }
       })
     }, 500)
-}
+  }
+
+  resetShow = () => {
+    this.setState({
+      show: false
+    })
+    console.log("reset show")
+  }
 
   render = () => {
     return (
       <>
       <div className="App">
-        <AddQuestionModal show={this.state.show_question} student={true} options={this.state.options}/>
+        <AddQuestionModal show={this.state.show_question} student={true} options={this.state.options} resetShow={this.resetShow}/>
         <SinglePagePDFViewer pdf={samplePDF} className="Single-pg"/>
         <ToggleButtons className="task-bar-btns"/>
       </div>c

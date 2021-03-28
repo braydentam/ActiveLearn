@@ -3,3 +3,11 @@
     overflow: auto;
     background-color: white;
 }
+
+.btn-back-teacher{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}

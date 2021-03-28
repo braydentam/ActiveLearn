@@ -64,7 +64,7 @@ class SinglePage extends React.Component {
 
   render = () => {
     return (
-      <div>
+      <div class="pdfCon">
         <Document
           file={this.state.pdf}
           options={{ workerSrc: "/pdf.worker.js" }}
