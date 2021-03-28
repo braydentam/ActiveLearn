@@ -1,6 +1,7 @@
 import React, {Component, useState} from 'react';
 import {Modal, Button, Row, Col, Form} from 'react-bootstrap';
-import {globalObject} from "../../App"
+import {globalObject} from "../../App";
+import './modal.css';
 
 class AddQuestionModal extends React.Component {
     constructor(props) {
@@ -48,7 +49,7 @@ class AddQuestionModal extends React.Component {
     render = () => {
         return (
         <>
-            <Button variant="danger" onClick={this.handleShow}>
+            <Button className = "open" variant="danger" onClick={this.handleShow}>
                 Open Question
             </Button>
 
