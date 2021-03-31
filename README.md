@@ -25,3 +25,5 @@ We help teachers create, share, and engage with their students with interactive 
 
 https://activelearn.netlify.app/ (Designed for Laptop/PC at the moment)
 
+The project name was inspired by Akshay Datla.
+
